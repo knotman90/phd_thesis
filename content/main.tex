@@ -1,0 +1,51 @@
+\documentclass{report}
+\usepackage{graphicx}
+\usepackage[doublespacing]{setspace}
+\usepackage{wrapfig,booktabs}
+\usepackage{subfigure}
+\usepackage{amsmath,varwidth,array,ragged2e}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{mathtools}
+\begin{document}
+
+\title{Phd Thesis}
+\author{Davide Spataro}
+
+\maketitle
+
+
+\pagestyle{plain}
+\setcounter{tocdepth}{5}
+%\setstretch{1.05}
+
+\addcontentsline{toc}{section}{\listfigurename}
+\addcontentsline{toc}{section}{\listtablename}
+\tableofcontents
+
+
+%\include{abstract/abstract}
+%\include{introduction/introduction}
+\include{CA_FDM/ca}
+\include{CA_FDM/fdm}
+\include{bacteria/bacteria}
+
+
+\include{appendices/grossone}
+\include{biblio}
+
+\begin{equation}
+    \label{simple_equation}
+    \alpha = \sqrt{ \beta }
+\end{equation}
+
+\subsection{Subsection Heading Here}
+Write your subsection text here.
+
+
+\section{Conclusion}
+Write your conclusion here.
+
+\end{document}
