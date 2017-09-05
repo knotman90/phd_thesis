@@ -141,11 +141,6 @@ number of state for each cell is small\footnote{Otherwise the dimension of that 
 states.} otherwise is defined by an algorithmic procedure.
 It may be probabilistic, in the case of stochastic cellular automata.
 
-
-
-
-
-
 \section{Formal Definition}
 Cellular automata are dynamic models that are
 discrete in time, space and state. A simple cellular
@@ -163,13 +158,14 @@ transition function that describe the state change given the current state and
 \begin{wraptable}{r}{6.0cm}
 \scalebox{1.2}{
 \begin{tabular}{|c|ccccc|}\hline
-\delta & \(a\) & \(b\) & \(c\) & \(d\) & \(e\) \\ \hline
+\(\delta\) & \(a\) & \(b\) & \(c\) & \(d\) & \(e\) \\ \hline
 \(q_0\) &\(q_0\) &\(q_0\) &\(q_2\) &\(q_1\) &\(q_1\)\\  
 \(q_1\) &\(q_1\) &\(q_3\) &\(q_1\) &\(q_1\) &\(q_1\)\\  
 \(q_2\) &\(q_3\) &\(q_2\) &\(q_2\) &\(q_0\) &\(q_1\)\\  
-\(q_3\) &\(q_0\) &\(q_1\) &\(q_1\) &\(q_0\) &\(q_1\) \\ \hline 
+\(q_3\) &\(q_0\) &\(q_1\) &\(q_1\) &\(q_0\) &\(q_1\) \\ 
+\hline 
  \end{tabular}
- }
+}
  \caption{Tabular representation of a DFM's next-state function}
  \label{tab:tabularTransitionFunction}
 \end{wraptable} 
@@ -311,13 +307,13 @@ where:
   \begin{math}\left\vert{\sigma}\right\vert={\left\vert{Q}\right\vert}^m\end{math}
   entries, an exceedingly large number.
   \item \begin{math}\tau=C \longrightarrow C \longmapsto
-  \sigma(c(N(X,i)))\end{math} where \begin{math}C=\Set*{c}{c \colon Z^d
-  \rightarrow Q}\end{math} is called the set of the possible configuration and 
+  \sigma(c(N(X,i))) \end{math} where 
+  where $C=\{c \colon Z^d
+  \rightarrow Q\}$
+  is called the set of the possible configuration and 
   \begin{math}
   C(N(X,i)))\end{math} is the set of states of the neighborhood of \textit{i}.
 \end{itemize}
-
-
 
 
 For example consider a 2D cellular automata with Moore neighborhood and a

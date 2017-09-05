@@ -1,14 +1,29 @@
 \documentclass{report}
+
+%----------------- packages include list ----------------
 \usepackage{graphicx}
+\usepackage{graphics}
 \usepackage[doublespacing]{setspace}
 \usepackage{wrapfig,booktabs}
 \usepackage{subfigure}
-\usepackage{amsmath,varwidth,array,ragged2e}
+\usepackage{amsmath,varwidth,array,ragged2e,amssymb}
 \usepackage{amsfonts}
+\usepackage{amsbsy}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{placeins}
 \usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{url}
+
+
+%--------------------- Commands ---------------------
+\newcommand*{\ArrowLength}{2.0em}%
+\newcommand*{\MyRightArrow}[1][]{%
+    \tikz [-stealth, red, yshift=0.5ex, baseline] 
+        \draw [-stealth, #1] (0,0) -- (\ArrowLength,0) ;
+}%
+%--------------------- begin document ---------------------
 \begin{document}
 
 \title{Phd Thesis}
@@ -26,11 +41,11 @@
 \tableofcontents
 
 
-%\include{abstract/abstract}
+\include{abstract/abstract}
 %\include{introduction/introduction}
 \include{CA_FDM/ca}
 \include{CA_FDM/fdm}
-\include{bacteria/bacteria}
+%\include{bacteria/bacteria}
 
 
 \include{appendices/grossone}

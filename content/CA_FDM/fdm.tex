@@ -10,8 +10,24 @@ The finite difference approximation for derivativatives is one of the simplest o
 
 
 
-    The general idea behind FDM is that the differential operator is approximated by replacing the derivatived using difference quotients, which are linear combination of function values at the grid points). In order to do so the space and time domain are \textit{partitioned} in a grid like fashion and approximated solutions are computed only for those discrete grid points.
-    The error, between the numerical solution and the exact solution is determined by the difference formula utilized and is commonly refeered as \textit{truncation}\footnote{The term truncation comes from the fact that a finite difference quotient is a truncation of the Taylor expansion.} or \textit{discretization} error.
+    The general idea behind FDM is that the differential operator is approximated by replacing the derivatived using difference quotients, which are linear combination of function values at the grid points). In order to do so the space and time domain are \textit{partitioned} in a grid like fashion and approximated solutions are computed only for those discrete grid points. The numerical solution is known only at a finite number of points in the physical domain.
+    Figure \ref{fig:schematic_repr_fdm} is a schematic representation of how FDM are used to obtain a numerical solution.
+    \begin{figure}
+    \centering
+    \begin{tikzpicture}
+
+    \node[draw, text centered,text width=2cm] (1) at (0,0) {Continuous PDE};
+    \node[draw, text centered,text width=2cm] (2) at (5.5,0) {Discrete Difference Equation};
+    \node[draw, text centered,text width=2cm] (3) at (11,0) {$T_j^n$, approximation};
+
+\draw[thick,->] (1) -- (2) node[midway,sloped,above,rotate=0] {\textbf{Finite Difference}};
+\draw[thick,->] (2) -- (3) node[midway,sloped,above,rotate=0] {\textbf{Solve}};
+\end{tikzpicture}
+    \caption{Relationship between continuous and discrete problems.}
+    \label{fig:schematic_repr_fdm}
+\end{figure}
+    
+    The error, between the numerical solution and the exact solution is determined by the difference formula utilized and is commonly refeered as \textit{truncation}\footnote{The term truncation comes from the fact that a finite difference quotient is a truncation of the Taylor expansion.} or \textit{discretization} error.  Increasing the resoution of the grid increases the accuracy of the numerical solution since the error associated with the finite difference formulas depends on the distance between grid points.
     
         
     Depending on how the derivatives are approximated, explicit or implicit FDM schemes are
@@ -127,6 +143,9 @@ The finite difference approximation for derivativatives is one of the simplest o
 \includegraphics[scale=0.3]{./images/CA_FDM/fdmgrid}
 \caption{1D heat equation FDM grid space and time partitioning.}\label{torus}
 \end{figure}
+
+Solution to equation \ref{eq:heatconduction} requires the specification of boundary conditions at $t=0$ and $x=0$ and $x=M$.
+In this example the temperature in the interior of the domain is assumed to be $0$ i.e. and edges in the $x$ dimension are assumed to be source of constant heat i.e. $T(0, 0<x<M)$,  $T(t,0)=100$, $T(t,M)=100$.
          
     $h = \Delta x = 0.2$ and $\Delta t = 0.01$ with initial
     conditions $T(0, 0 < x < M) = 0$ and boundary conditions $T(0,x=0)
