@@ -15,9 +15,19 @@
 \usepackage{mathtools}
 \usepackage{tikz}
 \usepackage{url}
+\usepackage{siunitx}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage{paralist}
 
+%----------------------------------------------------------------------------------------
+%	LISTINGS
+%----------------------------------------------------------------------------------------
+\input{listings.tex}
 
+\usetikzlibrary{positioning,chains,fit,shapes,calc, matrix}
 %--------------------- Commands ---------------------
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=0.3pt] (char) {#1};}}
 \newcommand*{\ArrowLength}{2.0em}%
 \newcommand*{\MyRightArrow}[1][]{%
     \tikz [-stealth, red, yshift=0.5ex, baseline] 
@@ -33,7 +43,7 @@
 
 
 \pagestyle{plain}
-\setcounter{tocdepth}{5}
+\setcounter{tocdepth}{c5}
 %\setstretch{1.05}
 
 \addcontentsline{toc}{section}{\listfigurename}
@@ -45,22 +55,13 @@
 %\include{introduction/introduction}
 \include{CA_FDM/ca}
 \include{CA_FDM/fdm}
+\include{opencal/opencal}
 %\include{bacteria/bacteria}
 
 
 \include{appendices/grossone}
 \include{biblio}
 
-\begin{equation}
-    \label{simple_equation}
-    \alpha = \sqrt{ \beta }
-\end{equation}
 
-\subsection{Subsection Heading Here}
-Write your subsection text here.
-
-
-\section{Conclusion}
-Write your conclusion here.
 
 \end{document}
