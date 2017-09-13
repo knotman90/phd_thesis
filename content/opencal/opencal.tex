@@ -271,3 +271,19 @@ In this section, we present a non-exhaustive overview of some
   on the adopted version of the library, execution can be performed on
   single- and multi-core CPUs, or on many-core accelerators like GPUs,
   almost transparently to the user.
+  
+   Figure \ref{fig:architecture} also shows hybrid MPI+Open-MP and
+  MPI+OpenCL parallel implementations of OpenCAL, which will allows to
+  exploit clusters of CPUs and many-core accelerators. 
+
+  Note that an OpenMP-based parallelization is generally more
+  straightforward with respect to one based on OpenCL or MPI and, when
+  compilers will fully support the 4.0/4.5 OpenMP specifications, it
+  will be possible to execute OpenMP-based applications on both
+  multi-core CPUs and many-core high-performance devices. On the other
+  hand, an OpenCL-based parallelization allows to exploit a wide range
+  of high-performance many-core devices straight away and, with greater control on the underlying hardware and on the execution flow, allowing better exploitation of the hardware capabilities. 
+ For these reasons, both the OpenMP and OpenCL versions of OpenCAL have been developed and are maintained. 
+  
+  
+  

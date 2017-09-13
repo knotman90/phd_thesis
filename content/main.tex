@@ -3,6 +3,7 @@
 %----------------- packages include list ----------------
 \usepackage{graphicx}
 \usepackage{graphics}
+%\usepackage[inline]{enumitem}
 \usepackage[doublespacing]{setspace}
 \usepackage{wrapfig,booktabs}
 \usepackage{subfigure}
@@ -18,6 +19,7 @@
 \usepackage{siunitx}
 \usepackage[linesnumbered,ruled]{algorithm2e}
 \usepackage{paralist}
+\usepackage{siunitx}
 
 %----------------------------------------------------------------------------------------
 %	LISTINGS
@@ -43,7 +45,7 @@
 
 
 \pagestyle{plain}
-\setcounter{tocdepth}{c5}
+
 %\setstretch{1.05}
 
 \addcontentsline{toc}{section}{\listfigurename}
@@ -55,6 +57,7 @@
 %\include{introduction/introduction}
 \include{CA_FDM/ca}
 \include{CA_FDM/fdm}
+\include{parallel_programming/parallel_programming}
 \include{opencal/opencal}
 %\include{bacteria/bacteria}
 
